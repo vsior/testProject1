@@ -1,0 +1,14 @@
+[Unit]
+Description=test-env
+After=networking.service
+#Requires=rabbitmq-server.service
+
+[Service]
+Type=simple
+WorkingDirectory=/mnt/DATA_NO_DALETE/my_GoLang_Projects/testProject1
+ExecStart=/mnt/DATA_NO_DALETE/my_GoLang_Projects/testProject1/testProject1
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
